@@ -1,0 +1,29 @@
+<div class="ui-modal-overlay" [ngStyle]="overlayStyles"></div>
+
+<div class="ui-modal" tabindex="-1" role="dialog"
+     #modalRoot
+     appDraggable
+     [dragEventTarget]="dragEventTarget"
+     [ngStyle]="dialogStyles">
+    
+  <div class="ui-modal-header" #modalHeader
+        (mousedown)="initDrag($event)"
+        (touchstart)="initDrag($event)">
+    <div class="ui-titlebar">
+      <span class="ui-modal-title" *ngIf="title">{{title}}</span>
+      <ng-content select=".app-modal-header"></ng-content>
+    </div>
+    <div class="ui-controlbar">
+      <i class="fa fa-window-close fa-lg ui-icon" aria-hidden="true" (click)="hide()" 
+        (mousedown)="onCloseIcon($event)" (touchstart)="onCloseIcon($event)"></i>
+    </div>
+  </div>
+  
+  <div class="ui-modal-body" #modalBody>
+    <ng-content select=".app-modal-body"></ng-content>
+  </div>
+ 
+  <div class="ui-modal-footer" #modalFooter>
+    <ng-content select=".app-modal-footer"></ng-content>
+  </div>
+</div>

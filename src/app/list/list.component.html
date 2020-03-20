@@ -1,0 +1,50 @@
+<h1>MP3 Holdings</h1>
+<br>
+<div class="mp3-table">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="cell-border stripe hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Asset</th>
+                <th>Artist Name</th>
+                <th>Track Title</th>
+                <th>Album Title</th>
+                <th>Track Number</th>
+                <th>Year</th>
+                <th>Genre</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mp3 of mp3s">
+                <td>{{ mp3.Id }}</td>
+                <td>{{ mp3.PhysicalAsset }}</td>
+                <td>{{ mp3.ArtistName }}</td>
+                <td>{{ mp3.TrackTitle }}</td>
+                <td>{{ mp3.AlbumTitle }}</td>
+                <td>{{ mp3.TrackNumber }}</td>
+                <td>{{ mp3.Year }}</td>
+                <td>{{ mp3.Genre }}</td>
+                <td>{{ mp3.Comment }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="edit-item" [hidden]="selection == null">
+    <h3>{{ (selection != null) ? selection.PhysicalAsset : "" }}</h3>
+    <button id="edit-entry-btn" [disabled]="selection == null" (click)="onEditSelection()">Update Selection</button>
+</div>
+
+<app-modal #modalInfo
+            [title]="messageHeader"
+            [width]="messageWindowWidth"
+            (closeModal)="onCloseInfo();">
+    <ng-container class="app-modal-body">
+        <p>{{messageText}}</p>
+    </ng-container>
+    <ng-container class="app-modal-footer">
+        <input type="button" value="OK" (click)="onInfoOk()">
+    </ng-container>
+</app-modal>
+
+<ngx-spinner bdOpacity=0.9 bdColor="#333" size="medium" color="#fff" type="ball-atom"><p style="color:white">Gathering...</p></ngx-spinner>

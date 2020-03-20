@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+$body-primary: #EEEEEE;
+$font: 'Montserrat';
+
+body {
+    margin: 0;
+    font-family: $font;
+    background: $body-primary;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;;
+    margin: 0 auto;
+}

@@ -1,0 +1,43 @@
+.create-admin {
+    background-color: white;
+    margin-top: 20px;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border-radius: .5em;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+}
+
+h3 {
+    font-size: .9em;
+}
+
+.input-location {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    width: 90%
+}
+
+.create-admin input[type=button] {
+    background-color: rgb(27,186,179);
+    color:white;
+    border: none;
+    padding: 1em 1em;
+    border-radius: .5em;
+    margin-top: 1.2em;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .input-location {
+        font-size: 1.2em;
+    }
+
+    .create-admin input[type=button] {
+        font-size: 1em;
+    }
+}

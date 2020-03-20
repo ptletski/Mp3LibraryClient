@@ -1,0 +1,20 @@
+.perform-exec {
+    margin-top: 2em;
+}
+
+.perform-exec input[type=button] {
+    background-color: rgb(27,186,179);
+    color:white;
+    font-size: .8em;
+    border: none;
+    padding: 1em 1em;
+    border-radius: .5em;
+    margin-top: 1.2em;
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    .perform-exec input[type=button] {
+        font-size: 1em;
+    }
+}

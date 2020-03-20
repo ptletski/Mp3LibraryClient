@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+$primary: red;
+$nav-back: rgb(252, 246, 246);
+$nav-fore: rgb(20, 6, 6);
+$font: 'Montserrat';
+$app-li-fw: normal;
+$app-li-fw-hover: bold;
+$app-li-color: black;
+$app-li-hovercolor: red;
+$disclaimer-color: red;
+
+nav {
+    ul {
+        background: $nav-back;
+        list-style-type: none;
+        display: flex;
+        font-size: 1.75em;
+        font-weight: bold;
+        justify-content: space-between;
+    }
+
+    li {
+        text-decoration: none;
+        color: $nav-fore;
+        padding-top: .5em;
+        padding-left: 1em;
+    }
+
+    li a {
+        text-decoration: none;
+        color: $nav-fore;
+        padding-right: 1em;
+    }
+
+    li img {
+        margin-bottom: .3em;
+    }
+
+    li #about :hover {
+        font-weight: $app-li-fw-hover;
+        color: $app-li-hovercolor;
+    }
+}  
+
+.apps-container {
+    display: flex;
+    justify-content: center;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    li {
+        color: $app-li-color;
+        font-weight:$app-li-fw;
+        font-size: 1em;
+        text-align: center;
+        border-radius: .5em;
+        box-shadow: 
+            -12px -12px 12px 0 rgba(255,255,255,1),
+            12px 12px 12px 0 rgba(0,0,0,.03);
+    }
+
+    li:hover {
+        font-weight: $app-li-fw-hover;
+        color: $app-li-hovercolor;
+    }
+}
+
+.apps-container {
+    ul {
+        display: block;
+    }
+
+    li {
+        width: 120px;
+        margin: 2em;
+        padding: 20px;
+    }
+
+    img {
+        max-width: 55%;
+        max-height: 55%;
+    }
+}
+
+@media (min-width: 900px) {
+    .apps-container {
+        display: flex;
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            width: 255px;
+            margin: 1em;
+            padding: 20px;
+            font-size: 1.4em;
+        }
+
+        img {
+            max-width: 125%;
+            max-height: 125%;
+        }
+    }
+}

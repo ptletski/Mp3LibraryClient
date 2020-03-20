@@ -1,0 +1,16 @@
+<div class="read-admin" *ngIf="adminLocations">
+    <h3>Locations To Search</h3>
+    <ul *ngIf="adminLocations">
+        <li class="location-li" *ngFor="let location of adminLocations | async; let i = index">
+            <button class="read-remove" (click)="deleteLocation(i)">Remove</button>
+            {{ location.Location }}
+        </li>
+    </ul>
+</div>
+
+<!--
+<li *ngFor="let location of adminLocations.Locations | async">
+        TEST
+        {{ location }}
+</li>
+-->

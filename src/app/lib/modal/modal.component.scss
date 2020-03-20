@@ -1,0 +1,103 @@
+$colors: (
+  title: blue,
+  overlay-background: rgba(0, 0, 0, 0.2),
+  modal-background: white,
+  header: green,
+  controlbar: green,
+  icon-body: green,
+  icon-border: green,
+  icon-background: white,
+  icon-hover: green
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+.ui-modal-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color(overlay-background);
+  }
+  
+  .ui-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px 5px 10px 5px;
+    background: color(modal-background);
+    border-radius: 0.5em;
+  }
+  
+  .ui-modal-header {
+    position: relative;
+    color: white;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 5px;
+    background-color: color(header); 
+    border-radius: 0.4em; 
+    height: 26px;
+  }
+  
+  .ui-modal-body {
+    position: relative;
+    padding: 15px 5px 5px 5px;
+    max-height: calc(100vh - 200px);
+    /* overflow-y: auto; */
+    /* -webkit-overflow-scrolling: touch; */
+  }
+  
+  .ui-modal-footer {
+    padding: 15px 5px 5px 5px;
+    text-align: center;
+  }
+  
+  .ui-titlebar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .ui-modal-title {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  
+  .ui-controlbar {
+    display: flex;
+    align-items: center;
+    background-color: color(controlbar);
+  }
+  
+  .ui-icon {
+    cursor: pointer;
+    color: color(icon-body);
+    border:1px solid color(icon-border);
+    background-color: color(icon-background);
+  }
+  
+  .ui-icon:hover {
+    color:white;
+    background-color: color(icon-hover);
+  }
+  
+  .dragging {
+    cursor: move;
+    outline: 0;
+    -webkit-user-select: none;
+    user-select: none;
+  }

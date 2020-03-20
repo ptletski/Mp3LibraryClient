@@ -1,0 +1,29 @@
+<div class="nav-container">
+  <header>
+    <nav>
+      <a href="#" class="hide-desktop">
+        <img src="../assets/images/ham.svg" alt="toggle menu" class="menu" id="menu">
+      </a>
+      <span class="hide-desktop mobile-title">MP3 Library</span>
+      <ul class="show-desktop hide-mobile" id="nav-bar">
+        <li id="exit" class="exit-btn hide-desktop"><img src="../assets/images/exit.svg" alt="exit menu"></li>
+        <li>
+          <a [routerLink]="['/home']"><img src="../assets/images/mp3-0.png" alt="Home" class="logo"><span class="hide-desktop">Home</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/list']"><span>MP3 Library</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/admin']"><span>Administer</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/about']"><span>About</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
