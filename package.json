@@ -23,7 +23,7 @@
     "angular-datatables": "^8.0.0",
     "datatables.net": "^1.10.20",
     "datatables.net-dt": "^1.10.20",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-spinner": "^9.0.1",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.4",
